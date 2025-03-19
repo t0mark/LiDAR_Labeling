@@ -24,13 +24,7 @@
   
 On Ubuntu 22.04/20.04, the dependencies can be installed from the package manager:
 ```bash
-sudo apt install git libeigen3-dev libboost-all-dev qtbase5-dev libglew-dev
-```
-
-Additionally, make sure you have [catkin-tools](https://catkin-tools.readthedocs.io/en/latest/) and the [fetch](https://github.com/Photogrammetry-Robotics-Bonn/catkin_tools_fetch) verb installed:
-```bash
-sudo apt install python-pip
-sudo pip install catkin_tools catkin_tools_fetch empy
+sudo apt install cmake g++ git libeigen3-dev libboost-all-dev qtbase5-dev libglew-dev
 ```
 
 Then, build the project, change to the cloned directory and use the following commands:
@@ -47,7 +41,7 @@ make -j5
 ```
 
 
-Now the project root directory (e.g. `~/catkin_ws/src/point_labeler`) should contain a `bin` directory containing the labeler.
+Now the project root directory (e.g. `~/point_labeler`) should contain a `bin` directory containing the labeler.
 
 
 ## Usage
@@ -59,12 +53,12 @@ The labeling tool allows to label a sequence of point clouds in a tile-based fas
 Thus, you will always label the part of the scans that overlaps with the current tile.
 
 
-In the `settings.cfg` files you can change the followings options:
+In the `settings.cfg` files you can change the following options:
 
 <pre>
 
 tile size: 100.0   # size of a tile (the smaller the less scans get loaded.)
-max scans: 500    # number of scans to load for a tile. (should be maybe 1000), but this currently very memory consuming.
+max scans: 500    # number of scans to load for a tile. (should be maybe 1000), but this is currently very memory-consuming.
 min range: 0.0    # minimum distance of points to consider.
 max range: 50.0   # maximum distance of points in the point cloud.
 add car points: true # add points at the origin of the sensor possibly caused by the car itself. Default: false.

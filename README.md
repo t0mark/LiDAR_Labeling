@@ -25,6 +25,8 @@ source ~/catkin_ws/devel/setup.bash
 ### 실행
 ``` bash
 # 각각 다른 터미널에서 실행
+## 각 터미널 마다 환경변수 설정
+source ~/catkin_ws/devel/setup.bash
 
 # LeGO-LOAM 실행
 roslaunch lego_loam run.launch

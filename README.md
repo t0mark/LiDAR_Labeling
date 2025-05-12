@@ -4,7 +4,7 @@
 - 추출한 pose를 poses.txt로 저장
 ---
 ### 참조
-[LeGO-LOAM](https://github.com/RobustFieldAutonomyLab/LeGO-LOAM.git)
+- [LeGO-LOAM](https://github.com/RobustFieldAutonomyLab/LeGO-LOAM.git)
 ---
 ### 사전 준비
 - Ubuntu 20.04 LTS

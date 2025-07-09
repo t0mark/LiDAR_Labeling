@@ -16,7 +16,7 @@
 ``` bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-git clone https://github.com/t0mark/Save-Poses.txt-with-LeGO-LOAM
+git clone https://github.com/t0mark/LiDAR_Labeling -b save_pose
 cd ..
 catkin_make
 source ~/catkin_ws/devel/setup.bash
@@ -35,7 +35,7 @@ roslaunch lego_loam run.launch
 rosrun lego_loam_pose_saver pose_saver
 
 # bag 파일 play
-rosbag play {bag 파일} --clock --topic /ouster/points:={pcd 토픽} /ouster/imu:={imu 토픽}
+rosbag play {bag 파일} --clock --topic /ouster/points:=/velodyne_points /ouster/imu:=/imu/data
 ```
 
 ### 결과

@@ -11,6 +11,18 @@
 - ROS1 Noetic
 - catkin_package
 - GTSAM
+#### 수정
+- /usr/include/pcl-1.10/pcl/filters/voxel_grid.h
+``` bash
+# pcl 라이브러리 수정
+sudo gedit /usr/include/pcl-1.10/pcl/filters/voxel_grid.h
+
+# 340번, 669번째 줄 변경
+## 변경 전
+for (Eigen::Index ni = 0; ni < relative_coordinates.cols (); ni++)
+## 변경 후
+for (int ni = 0; ni < relative_coordinates.cols (); ni++)
+```
 
 ### build
 ``` bash
@@ -27,6 +39,9 @@ source ~/catkin_ws/devel/setup.bash
 # 각각 다른 터미널에서 실행
 ## 각 터미널 마다 환경변수 설정
 source ~/catkin_ws/devel/setup.bash
+## 또는 영구 설정
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
 # LeGO-LOAM 실행
 roslaunch lego_loam run.launch
@@ -35,7 +50,7 @@ roslaunch lego_loam run.launch
 rosrun lego_loam_pose_saver pose_saver
 
 # bag 파일 play
-rosbag play {bag 파일} --clock --topic /ouster/points:=/velodyne_points /ouster/imu:=/imu/data
+rosbag play {bag 파일} --clock /ouster/points:=/velodyne_points /ouster/imu:=/imu/data
 ```
 
 ### 결과

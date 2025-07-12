@@ -129,7 +129,7 @@ void main()
   if(useRemission)
   { 
         
-      in_remission = clamp(in_remission, 0.0, 1.0);
+      in_remission = clamp(in_remission / 65535, 0.0, 1.0);
       if(label != uint(0))
       {
 	      

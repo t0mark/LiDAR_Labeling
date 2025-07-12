@@ -11,12 +11,12 @@
 ## 수정
 - Ouster의 intensity 문제
     - src/shaders/draw_points.vert 
-``` vert
+``` glsl
 # 수정 전
 in_remission = clamp(in_remission, 0.0, 1.0);
 
 # 수정 후
-in_remission = clamp(in_remission / 65535, 0.0, 1.0);
+in_remission = clamp(in_remission / 255.0, 0.0, 1.0);
 ``` 
 
 

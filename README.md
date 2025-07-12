@@ -53,6 +53,16 @@ point cloud folder
 └── poses.txt             -- 각 스캔 당 pose 정보 파일
 </pre>
 
+- 설정 파일 변경 (bin/settings.cfg)
+``` txt
+tile size: 100.0
+max scans: 500
+min range: 2.5
+max range: 50.0
+gpu memory: 6
+add car points: true
+```
+
 - 이미지 보기
 
 - 단축키

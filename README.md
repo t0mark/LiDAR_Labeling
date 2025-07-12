@@ -55,11 +55,11 @@ point cloud folder
 
 - 설정 파일 변경 (bin/settings.cfg)
 ``` txt
-tile size: 100.0
-max scans: 500
-min range: 2.5
-max range: 50.0
-gpu memory: 6
+tile size: 50.0
+max scans: 100
+min range: 0.0
+max range: 30.0
+gpu memory: 8
 add car points: true
 ```
 

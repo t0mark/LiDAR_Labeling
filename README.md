@@ -28,7 +28,7 @@ for (int ni = 0; ni < relative_coordinates.cols (); ni++)
 ``` bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-git clone https://github.com/t0mark/LiDAR_Labeling -b save_pose
+git clone https://github.com/t0mark/LiDAR_Labeling -b pose_to_file_w.LeGO-LOAM
 cd ..
 catkin_make
 source ~/catkin_ws/devel/setup.bash
